@@ -30,6 +30,16 @@ gem 'jbuilder', '~> 1.2'
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
+
+  gem "therubyracer"
+
+  gem "less-rails"
+
+  gem "twitter-bootstrap-rails"
+
+  gem "simple_form"
+
+
 end
 
 # Use ActiveModel has_secure_password
