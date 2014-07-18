@@ -1,6 +1,18 @@
 Depot::Application.routes.draw do
+  resources :line_items
+
+  resources :carts
+
   get "store/index"
+
   resources :products
+
+  get 'index2/' => 'store#index2'
+
+  get 'index3/' => 'store#index3'
+
+  #get 'alterar1/:id' => 'diretorios#alterar1'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
