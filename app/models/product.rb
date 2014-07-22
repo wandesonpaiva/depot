@@ -1,5 +1,7 @@
 class Product < ActiveRecord::Base
 
+  before_destroy :ensure_not_referenced_by_any_line_item
+
   validates_presence_of :title, :description, :image_url, :price
   validates_uniqueness_of :title
   validates :price, numericality: {greater_than_or_equal_to: 0.01}
